@@ -1,0 +1,74 @@
+{
+	"extends": [
+		"eslint:recommended",
+		"plugin:react/recommended",
+		"plugin:@typescript-eslint/eslint-recommended",
+		"plugin:@typescript-eslint/recommended"
+	],
+	"env": {
+		"browser": true,
+		"node": true,
+		"es6": true
+	},
+	"root": true,
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaVersion": 8,
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"sourceType": "module"
+	},
+	"plugins": [
+		"babel",
+		"react",
+		"@typescript-eslint"
+	],
+	"globals": {
+		"JSX": true
+	},
+	"overrides": [
+		{
+			"files": [
+				"*.tsx"
+			],
+			"rules": {
+				"no-undef": "off"
+			}
+		}
+	],
+	"rules": {
+		"max-len": [
+			2,
+			{
+				"code": 5000,
+				"tabWidth": 2,
+				"ignoreUrls": true
+			}
+		],
+		"template-curly-spacing": "off",
+		"indent": "off",
+		"semi": [
+			"error",
+			"always"
+		],
+		"no-trailing-spaces": [
+			"error",
+			{
+				"skipBlankLines": true
+			}
+		],
+		"no-unused-vars": 0,
+		"@typescript-eslint/no-unused-vars": 1,
+		"@typescript-eslint/ban-ts-comment": 1,
+		"react/prop-types": [
+			"off",
+			{
+				"ignore": [
+					"dispatch"
+				],
+				"skipUndeclared": true
+			}
+		]
+	}
+}
